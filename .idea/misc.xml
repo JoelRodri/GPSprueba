@@ -11,6 +11,10 @@
         <entry key="..\:/Users/UB/AndroidStudioProjects/GPSprueba/app/src/main/res/layout/nav_header_main.xml" value="0.2957427536231884" />
         <entry key="..\:/Users/UB/AndroidStudioProjects/GPSprueba/app/src/main/res/menu/activity_main_drawer.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/UB/AndroidStudioProjects/GPSprueba/app/src/main/res/menu/main.xml" value="0.36666666666666664" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/layout/fragment_maps.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/layout/fragment_pantalla_inicio.xml" value="0.33" />
       </map>
     </option>
   </component>
