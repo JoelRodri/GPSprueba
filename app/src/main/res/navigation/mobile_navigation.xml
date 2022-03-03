@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@id/pantalla_inicio">
 
     <fragment
         android:id="@+id/nav_home"
@@ -27,4 +27,14 @@
         android:name="com.example.gpsprueba.pantalla_inicio"
         android:label="fragment_pantalla_inicio"
         tools:layout="@layout/fragment_pantalla_inicio" />
+    <fragment
+        android:id="@+id/buscarDireccion"
+        android:name="com.example.gpsprueba.BuscarDireccion"
+        android:label="fragment_buscar_direccion"
+        tools:layout="@layout/fragment_buscar_direccion" />
+    <fragment
+        android:id="@+id/direcciones"
+        android:name="com.example.gpsprueba.direcciones"
+        android:label="fragment_direcciones"
+        tools:layout="@layout/fragment_direcciones" />
 </navigation>
