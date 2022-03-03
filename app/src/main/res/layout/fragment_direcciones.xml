@@ -34,7 +34,7 @@
             android:textAlignment="textStart"
             android:textColor="@color/black"
             android:textStyle="bold"
-            app:icon="@drawable/añadir"
+            app:icon="@drawable/anadir"
             app:iconTint="#000000"
             app:layout_constraintTop_toTopOf="parent"
             tools:layout_editor_absoluteX="16dp" />

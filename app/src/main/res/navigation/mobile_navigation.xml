@@ -9,7 +9,14 @@
         android:id="@+id/nav_home"
         android:name="com.example.gpsprueba.ui.home.HomeFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_buscarDireccion"
+            app:destination="@id/buscarDireccion" />
+        <action
+            android:id="@+id/action_nav_home_to_direcciones"
+            app:destination="@id/direcciones" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_gallery"
@@ -25,16 +32,28 @@
     <fragment
         android:id="@+id/pantalla_inicio"
         android:name="com.example.gpsprueba.pantalla_inicio"
-        android:label="fragment_pantalla_inicio"
-        tools:layout="@layout/fragment_pantalla_inicio" />
+        tools:layout="@layout/fragment_pantalla_inicio" >
+        <action
+            android:id="@+id/action_pantalla_inicio_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
     <fragment
         android:id="@+id/buscarDireccion"
         android:name="com.example.gpsprueba.BuscarDireccion"
-        android:label="fragment_buscar_direccion"
-        tools:layout="@layout/fragment_buscar_direccion" />
+        android:label="@string/buscarDireccion"
+        tools:layout="@layout/fragment_buscar_direccion" >
+        <action
+            android:id="@+id/action_buscarDireccion_to_marcador"
+            app:destination="@id/marcador" />
+    </fragment>
     <fragment
         android:id="@+id/direcciones"
         android:name="com.example.gpsprueba.direcciones"
-        android:label="fragment_direcciones"
+        android:label="direc"
         tools:layout="@layout/fragment_direcciones" />
+    <fragment
+        android:id="@+id/marcador"
+        android:name="com.example.gpsprueba.marcador"
+        android:label="fragment_marcador"
+        tools:layout="@layout/fragment_marcador" />
 </navigation>
