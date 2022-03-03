@@ -50,10 +50,18 @@
         android:id="@+id/direcciones"
         android:name="com.example.gpsprueba.direcciones"
         android:label="direc"
-        tools:layout="@layout/fragment_direcciones" />
+        tools:layout="@layout/fragment_direcciones" >
+        <action
+            android:id="@+id/action_direcciones_to_marcador"
+            app:destination="@id/marcador" />
+    </fragment>
     <fragment
         android:id="@+id/marcador"
         android:name="com.example.gpsprueba.marcador"
         android:label="fragment_marcador"
-        tools:layout="@layout/fragment_marcador" />
+        tools:layout="@layout/fragment_marcador" >
+        <action
+            android:id="@+id/action_marcador_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
 </navigation>

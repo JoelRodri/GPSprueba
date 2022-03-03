@@ -26,4 +26,5 @@
     <string name="comenzar">Comenzar ruta</string>
     <string name="tiempo">5min</string>
     <string name="distancia">900m</string>
+    <string name="cancelar">Cancelar</string>
 </resources>
