@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="app">#CC9EFB</color>
     <color name="grisBoton">#B6B6B6</color>
+    <color name="rojo">#980000</color>
 </resources>

@@ -76,7 +76,7 @@ public class HomeFragment extends Fragment {
         textView2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                navController.navigate(R.id.action_nav_home_to_direcciones);
+                navController.navigate(R.id.action_nav_home_to_menuDireccion);
             }
         });
     }

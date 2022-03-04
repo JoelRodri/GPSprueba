@@ -84,5 +84,26 @@ public class BuscarDireccion extends Fragment {
                 navController.navigate(R.id.action_buscarDireccion_to_marcador );
             }
         });
+        button = view.findViewById(R.id.button6);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                navController.navigate(R.id.action_buscarDireccion_to_marcador );
+            }
+        });
+        button2 = view.findViewById(R.id.button5);
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                navController.navigate(R.id.action_buscarDireccion_to_direcciones );
+            }
+        });
+        button3 = view.findViewById(R.id.button4);
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                navController.navigate(R.id.action_buscarDireccion_to_rutasGuardadas );
+            }
+        });
     }
 }

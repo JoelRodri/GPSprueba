@@ -14,8 +14,8 @@
             android:id="@+id/action_nav_home_to_buscarDireccion"
             app:destination="@id/buscarDireccion" />
         <action
-            android:id="@+id/action_nav_home_to_direcciones"
-            app:destination="@id/direcciones" />
+            android:id="@+id/action_nav_home_to_menuDireccion"
+            app:destination="@id/menuDireccion" />
     </fragment>
 
     <fragment
@@ -45,6 +45,12 @@
         <action
             android:id="@+id/action_buscarDireccion_to_marcador"
             app:destination="@id/marcador" />
+        <action
+            android:id="@+id/action_buscarDireccion_to_rutasGuardadas"
+            app:destination="@id/rutasGuardadas" />
+        <action
+            android:id="@+id/action_buscarDireccion_to_direcciones"
+            app:destination="@id/direcciones" />
     </fragment>
     <fragment
         android:id="@+id/direcciones"
@@ -63,5 +69,80 @@
         <action
             android:id="@+id/action_marcador_to_nav_home"
             app:destination="@id/nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/puntosInteres"
+        android:name="com.example.gpsprueba.puntosInteres"
+        android:label="fragment_puntos_interes"
+        tools:layout="@layout/fragment_puntos_interes" >
+        <action
+            android:id="@+id/action_puntosInteres_to_radares"
+            app:destination="@id/radares" />
+        <action
+            android:id="@+id/action_puntosInteres_to_gasolineras"
+            app:destination="@id/gasolineras" />
+        <action
+            android:id="@+id/action_puntosInteres_to_comisarias"
+            app:destination="@id/comisarias" />
+    </fragment>
+    <fragment
+        android:id="@+id/radares"
+        android:name="com.example.gpsprueba.Radares"
+        android:label="fragment_radares"
+        tools:layout="@layout/fragment_radares" />
+    <fragment
+        android:id="@+id/gasolineras"
+        android:name="com.example.gpsprueba.Gasolineras"
+        android:label="fragment_gasolineras"
+        tools:layout="@layout/fragment_gasolineras" />
+    <fragment
+        android:id="@+id/comisarias"
+        android:name="com.example.gpsprueba.Comisarias"
+        android:label="fragment_comisarias"
+        tools:layout="@layout/fragment_comisarias" />
+    <fragment
+        android:id="@+id/rutasGuardadas"
+        android:name="com.example.gpsprueba.rutasGuardadas"
+        android:label="fragment_rutas_guardadas"
+        tools:layout="@layout/fragment_rutas_guardadas" >
+        <action
+            android:id="@+id/action_rutasGuardadas_to_infoRuta"
+            app:destination="@id/infoRuta" />
+        <action
+            android:id="@+id/action_rutasGuardadas_to_buscarDireccion"
+            app:destination="@id/buscarDireccion" />
+    </fragment>
+    <fragment
+        android:id="@+id/cerrarSesion"
+        android:name="com.example.gpsprueba.cerrarSesion"
+        android:label="fragment_cerrar_sesion"
+        tools:layout="@layout/fragment_cerrar_sesion" >
+        <action
+            android:id="@+id/action_cerrarSesion_to_pantalla_inicio"
+            app:destination="@id/pantalla_inicio" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuDireccion"
+        android:name="com.example.gpsprueba.menuDireccion"
+        android:label="fragment_menu_direccion"
+        tools:layout="@layout/fragment_menu_direccion" >
+        <action
+            android:id="@+id/action_menuDireccion_to_direcciones"
+            app:destination="@id/direcciones" />
+        <action
+            android:id="@+id/action_menuDireccion_to_rutasGuardadas"
+            app:destination="@id/rutasGuardadas" />
+        <action
+            android:id="@+id/action_menuDireccion_to_puntosInteres"
+            app:destination="@id/puntosInteres" />
+    </fragment>
+    <fragment
+        android:id="@+id/infoRuta"
+        android:name="com.example.gpsprueba.infoRuta"
+        android:label="fragment_info_ruta"
+        tools:layout="@layout/fragment_info_ruta" >
+        <action
+            android:id="@+id/action_infoRuta_to_marcador"
+            app:destination="@id/marcador" />
     </fragment>
 </navigation>

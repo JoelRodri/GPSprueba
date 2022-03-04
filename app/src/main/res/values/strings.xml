@@ -27,4 +27,11 @@
     <string name="tiempo">5min</string>
     <string name="distancia">900m</string>
     <string name="cancelar">Cancelar</string>
+    <string name="puntosInteres">Puntos de interes</string>
+    <string name="rutasProgramadas">Tus rutas</string>
+    <string name="cerrarSesionText">Esta seguro que desea cerrar sesión?</string>
+    <string name="confirmar">Confirmar</string>
+    <string name="tusDirecciones">Tus direcciones</string>
+    <string name="añadirRuta">Añadir ruta</string>
+    <string name="ruta1">Vacaciones semana santa</string>
 </resources>
