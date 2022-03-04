@@ -34,4 +34,8 @@
     <string name="tusDirecciones">Tus direcciones</string>
     <string name="añadirRuta">Añadir ruta</string>
     <string name="ruta1">Vacaciones semana santa</string>
+    <string name="radares">Radares</string>
+    <string name="comisarias">Comisarias</string>
+    <string name="gasolineras">Gasolineras</string>
+    <string name="añadirGasolinera">Añadir gasolinera</string>
 </resources>

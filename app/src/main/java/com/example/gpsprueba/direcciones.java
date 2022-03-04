@@ -93,10 +93,11 @@ public class direcciones extends Fragment {
             }
         });
         button3 = view.findViewById(R.id.button7);
-        button3.setOnClickListener(new View.OnClickListener() {
+        button3.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
-            public void onClick(View view) {
-                navController.navigate(R.id.action_nav_home_to_buscarDireccion);
+            public boolean onLongClick(View view) {
+                navController.navigate(R.id.action_direcciones_to_buscarDireccion);
+                return false;
             }
         });
     }

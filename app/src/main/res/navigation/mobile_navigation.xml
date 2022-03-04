@@ -25,11 +25,6 @@
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.gpsprueba.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
-    <fragment
         android:id="@+id/pantalla_inicio"
         android:name="com.example.gpsprueba.pantalla_inicio"
         tools:layout="@layout/fragment_pantalla_inicio" >
@@ -60,6 +55,9 @@
         <action
             android:id="@+id/action_direcciones_to_marcador"
             app:destination="@id/marcador" />
+        <action
+            android:id="@+id/action_direcciones_to_buscarDireccion"
+            app:destination="@id/buscarDireccion" />
     </fragment>
     <fragment
         android:id="@+id/marcador"
@@ -69,6 +67,9 @@
         <action
             android:id="@+id/action_marcador_to_nav_home"
             app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_marcador_to_direcciones"
+            app:destination="@id/direcciones" />
     </fragment>
     <fragment
         android:id="@+id/puntosInteres"
@@ -85,21 +86,6 @@
             android:id="@+id/action_puntosInteres_to_comisarias"
             app:destination="@id/comisarias" />
     </fragment>
-    <fragment
-        android:id="@+id/radares"
-        android:name="com.example.gpsprueba.Radares"
-        android:label="fragment_radares"
-        tools:layout="@layout/fragment_radares" />
-    <fragment
-        android:id="@+id/gasolineras"
-        android:name="com.example.gpsprueba.Gasolineras"
-        android:label="fragment_gasolineras"
-        tools:layout="@layout/fragment_gasolineras" />
-    <fragment
-        android:id="@+id/comisarias"
-        android:name="com.example.gpsprueba.Comisarias"
-        android:label="fragment_comisarias"
-        tools:layout="@layout/fragment_comisarias" />
     <fragment
         android:id="@+id/rutasGuardadas"
         android:name="com.example.gpsprueba.rutasGuardadas"
@@ -145,4 +131,19 @@
             android:id="@+id/action_infoRuta_to_marcador"
             app:destination="@id/marcador" />
     </fragment>
+    <fragment
+        android:id="@+id/radares"
+        android:name="com.example.gpsprueba.radares"
+        android:label="fragment_radares2"
+        tools:layout="@layout/fragment_radares" />
+    <fragment
+        android:id="@+id/gasolineras"
+        android:name="com.example.gpsprueba.gasolineras"
+        android:label="fragment_gasolineras"
+        tools:layout="@layout/fragment_gasolineras" />
+    <fragment
+        android:id="@+id/comisarias"
+        android:name="com.example.gpsprueba.comisarias"
+        android:label="fragment_comisarias2"
+        tools:layout="@layout/fragment_comisarias" />
 </navigation>
