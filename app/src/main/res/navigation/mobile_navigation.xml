@@ -27,6 +27,7 @@
     <fragment
         android:id="@+id/pantalla_inicio"
         android:name="com.example.gpsprueba.pantalla_inicio"
+        android:label="Inicio de sesión"
         tools:layout="@layout/fragment_pantalla_inicio" >
         <action
             android:id="@+id/action_pantalla_inicio_to_nav_home"
@@ -50,7 +51,7 @@
     <fragment
         android:id="@+id/direcciones"
         android:name="com.example.gpsprueba.direcciones"
-        android:label="direc"
+        android:label="Direcciones guardadas"
         tools:layout="@layout/fragment_direcciones" >
         <action
             android:id="@+id/action_direcciones_to_marcador"
@@ -62,7 +63,7 @@
     <fragment
         android:id="@+id/marcador"
         android:name="com.example.gpsprueba.marcador"
-        android:label="fragment_marcador"
+        android:label="Fast To GO"
         tools:layout="@layout/fragment_marcador" >
         <action
             android:id="@+id/action_marcador_to_nav_home"
@@ -77,7 +78,7 @@
     <fragment
         android:id="@+id/puntosInteres"
         android:name="com.example.gpsprueba.puntosInteres"
-        android:label="fragment_puntos_interes"
+        android:label="Puntos de interes"
         tools:layout="@layout/fragment_puntos_interes" >
         <action
             android:id="@+id/action_puntosInteres_to_radares"
@@ -92,7 +93,7 @@
     <fragment
         android:id="@+id/rutasGuardadas"
         android:name="com.example.gpsprueba.rutasGuardadas"
-        android:label="fragment_rutas_guardadas"
+        android:label="Tus rutas"
         tools:layout="@layout/fragment_rutas_guardadas" >
         <action
             android:id="@+id/action_rutasGuardadas_to_infoRuta"
@@ -104,7 +105,7 @@
     <fragment
         android:id="@+id/cerrarSesion"
         android:name="com.example.gpsprueba.cerrarSesion"
-        android:label="fragment_cerrar_sesion"
+        android:label="Cerrar sesión"
         tools:layout="@layout/fragment_cerrar_sesion" >
         <action
             android:id="@+id/action_cerrarSesion_to_pantalla_inicio"
@@ -113,7 +114,6 @@
     <fragment
         android:id="@+id/menuDireccion"
         android:name="com.example.gpsprueba.menuDireccion"
-        android:label="fragment_menu_direccion"
         tools:layout="@layout/fragment_menu_direccion" >
         <action
             android:id="@+id/action_menuDireccion_to_direcciones"
@@ -128,7 +128,7 @@
     <fragment
         android:id="@+id/infoRuta"
         android:name="com.example.gpsprueba.infoRuta"
-        android:label="fragment_info_ruta"
+        android:label="Información de la ruta"
         tools:layout="@layout/fragment_info_ruta" >
         <action
             android:id="@+id/action_infoRuta_to_marcador"
@@ -137,22 +137,22 @@
     <fragment
         android:id="@+id/radares"
         android:name="com.example.gpsprueba.radares"
-        android:label="fragment_radares2"
+        android:label="Radares"
         tools:layout="@layout/fragment_radares" />
     <fragment
         android:id="@+id/gasolineras"
         android:name="com.example.gpsprueba.gasolineras"
-        android:label="fragment_gasolineras"
+        android:label="Gasolineras"
         tools:layout="@layout/fragment_gasolineras" />
     <fragment
         android:id="@+id/comisarias"
         android:name="com.example.gpsprueba.comisarias"
-        android:label="fragment_comisarias2"
+        android:label="Comisarias"
         tools:layout="@layout/fragment_comisarias" />
     <fragment
         android:id="@+id/mapaFalso"
         android:name="com.example.gpsprueba.mapaFalso"
-        android:label="fragment_mapa_falso"
+        android:label="Fast To GO"
         tools:layout="@layout/fragment_mapa_falso" >
         <action
             android:id="@+id/action_mapaFalso_to_nav_home"
