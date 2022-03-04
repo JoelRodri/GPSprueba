@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +20,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.royrodriguez.transitionbutton.TransitionButton;
 
 public class pantalla_inicio extends Fragment {
 
@@ -29,8 +31,8 @@ public class pantalla_inicio extends Fragment {
         return inflater.inflate(R.layout.fragment_pantalla_inicio, container, false);
     }
 
-    Button button, button2;
     NavController navController;
+    TransitionButton transitionButton, transitionButton2;
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState){
@@ -42,18 +44,63 @@ public class pantalla_inicio extends Fragment {
 
         navController = Navigation.findNavController(view);
 
-        button = view.findViewById(R.id.button2);
-        button.setOnClickListener(new View.OnClickListener() {
+        transitionButton2 = view.findViewById(R.id.button3);
+        transitionButton2.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                navController.navigate(R.id.action_pantalla_inicio_to_nav_home);
+            public void onClick(View v) {
+                // Start the loading animation when the user tap the button
+                transitionButton2.startAnimation();
+
+                // Do your networking task or background work here.
+                final Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        boolean isSuccessful = true;
+
+                        // Choose a stop animation if your call was succesful or not
+                        if (isSuccessful) {
+                            transitionButton2.stopAnimation(TransitionButton.StopAnimationStyle.EXPAND, new TransitionButton.OnAnimationStopEndListener() {
+                                @Override
+                                public void onAnimationStopEnd() {
+                                    navController.navigate(R.id.action_pantalla_inicio_to_nav_home);
+                                }
+                            });
+                        } else {
+                            transitionButton2.stopAnimation(TransitionButton.StopAnimationStyle.SHAKE, null);
+                        }
+                    }
+                }, 2000);
             }
         });
-        button2 = view.findViewById(R.id.button3);
-        button2.setOnClickListener(new View.OnClickListener() {
+
+        transitionButton = view.findViewById(R.id.button2);
+        transitionButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                navController.navigate(R.id.action_pantalla_inicio_to_nav_home);
+            public void onClick(View v) {
+                // Start the loading animation when the user tap the button
+                transitionButton.startAnimation();
+
+                // Do your networking task or background work here.
+                final Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        boolean isSuccessful = true;
+
+                        // Choose a stop animation if your call was succesful or not
+                        if (isSuccessful) {
+                            transitionButton.stopAnimation(TransitionButton.StopAnimationStyle.EXPAND, new TransitionButton.OnAnimationStopEndListener() {
+                                @Override
+                                public void onAnimationStopEnd() {
+                                    navController.navigate(R.id.action_pantalla_inicio_to_nav_home);
+                                }
+                            });
+                        } else {
+                            transitionButton.stopAnimation(TransitionButton.StopAnimationStyle.SHAKE, null);
+                        }
+                    }
+                }, 2000);
             }
         });
     }
