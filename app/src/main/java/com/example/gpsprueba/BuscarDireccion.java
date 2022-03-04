@@ -15,6 +15,9 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.google.android.material.snackbar.BaseTransientBottomBar;
+import com.google.android.material.snackbar.Snackbar;
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link BuscarDireccion#newInstance} factory method to
@@ -71,6 +74,8 @@ public class BuscarDireccion extends Fragment {
 
     NavController navController;
     Button button, button2, button3;
+    Snackbar snackbar, snackbar2;
+
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState){
         super.onViewCreated(view, savedInstanceState);
@@ -84,25 +89,24 @@ public class BuscarDireccion extends Fragment {
                 navController.navigate(R.id.action_buscarDireccion_to_marcador );
             }
         });
-        button = view.findViewById(R.id.button6);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                navController.navigate(R.id.action_buscarDireccion_to_marcador );
-            }
-        });
+
+        snackbar2 = Snackbar.make(view,"Guardado con exito", BaseTransientBottomBar.LENGTH_SHORT);
         button2 = view.findViewById(R.id.button5);
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 navController.navigate(R.id.action_buscarDireccion_to_direcciones );
+                snackbar2.show();
             }
         });
+
+        snackbar = Snackbar.make(view,"Programado con exito", BaseTransientBottomBar.LENGTH_SHORT);
         button3 = view.findViewById(R.id.button4);
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 navController.navigate(R.id.action_buscarDireccion_to_rutasGuardadas );
+                snackbar.show();
             }
         });
     }

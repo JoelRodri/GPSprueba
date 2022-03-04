@@ -13,6 +13,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.google.android.material.snackbar.BaseTransientBottomBar;
+import com.google.android.material.snackbar.Snackbar;
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link cerrarSesion#newInstance} factory method to
@@ -69,6 +72,7 @@ public class cerrarSesion extends Fragment {
 
     NavController navController;
     Button button;
+    Snackbar snackbar;
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState){
@@ -76,11 +80,13 @@ public class cerrarSesion extends Fragment {
 
         navController = Navigation.findNavController(view);
 
+        snackbar = Snackbar.make(view,"Sesión cerrada", BaseTransientBottomBar.LENGTH_SHORT);
         button = view.findViewById(R.id.button12);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 navController.navigate(R.id.action_cerrarSesion_to_pantalla_inicio);
+                snackbar.show();
             }
         });
     }

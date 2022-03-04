@@ -19,6 +19,8 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.material.snackbar.BaseTransientBottomBar;
+import com.google.android.material.snackbar.Snackbar;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -83,6 +85,7 @@ public class marcador extends Fragment {
 
     NavController navController;
     Button button, button2;
+    Snackbar snackbar;
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
@@ -95,11 +98,14 @@ public class marcador extends Fragment {
 
         navController = Navigation.findNavController(view);
 
+
+        snackbar = Snackbar.make(view,"Guardado con exito", BaseTransientBottomBar.LENGTH_SHORT);
         button = view.findViewById(R.id.button11);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 navController.navigate(R.id.action_marcador_to_direcciones);
+                snackbar.show();
             }
         });
         /*button2 = view.findViewById(R.id.button10);
