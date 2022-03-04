@@ -70,6 +70,9 @@
         <action
             android:id="@+id/action_marcador_to_direcciones"
             app:destination="@id/direcciones" />
+        <action
+            android:id="@+id/action_marcador_to_mapaFalso"
+            app:destination="@id/mapaFalso" />
     </fragment>
     <fragment
         android:id="@+id/puntosInteres"
@@ -146,4 +149,13 @@
         android:name="com.example.gpsprueba.comisarias"
         android:label="fragment_comisarias2"
         tools:layout="@layout/fragment_comisarias" />
+    <fragment
+        android:id="@+id/mapaFalso"
+        android:name="com.example.gpsprueba.mapaFalso"
+        android:label="fragment_mapa_falso"
+        tools:layout="@layout/fragment_mapa_falso" >
+        <action
+            android:id="@+id/action_mapaFalso_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
 </navigation>
