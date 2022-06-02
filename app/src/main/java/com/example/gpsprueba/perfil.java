@@ -2,11 +2,21 @@ package com.example.gpsprueba;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
+
+import com.google.android.gms.maps.SupportMapFragment;
+import com.royrodriguez.transitionbutton.TransitionButton;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -60,5 +70,32 @@ public class perfil extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_perfil, container, false);
+
+    }
+
+    NavController navController;
+    TextView button, button2;
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState){
+        super.onViewCreated(view, savedInstanceState);
+
+        navController = Navigation.findNavController(view);
+
+        button = view.findViewById(R.id.textView47);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                navController.navigate(R.id.action_perfil_to_pantalla_inicio);
+            }
+        });
+
+        button2 = view.findViewById(R.id.textView49);
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                navController.navigate(R.id.action_perfil_to_pantalla_inicio);
+            }
+        });
     }
 }

@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.android.material.snackbar.BaseTransientBottomBar;
@@ -73,12 +74,14 @@ public class BuscarDireccion extends Fragment {
     }
 
     NavController navController;
-    Button button;
+    Button button, button2, button3, button4, button5;
+    ImageView imageButton, imageButton2, imageButton3, imageButton4;
+    Snackbar snackbar;
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState){
         super.onViewCreated(view, savedInstanceState);
-
+        snackbar = Snackbar.make(view,"Funcion en desarrollo", BaseTransientBottomBar.LENGTH_SHORT);
         navController = Navigation.findNavController(view);
 
         button = view.findViewById(R.id.button6);
@@ -88,6 +91,61 @@ public class BuscarDireccion extends Fragment {
                 navController.navigate(R.id.action_buscarDireccion_to_marcador );
             }
         });
-
+        button2 = view.findViewById(R.id.button23);
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                navController.navigate(R.id.action_buscarDireccion_to_gasolineras );
+            }
+        });
+        button3 = view.findViewById(R.id.button24);
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                snackbar.show();
+            }
+        });
+        button4 = view.findViewById(R.id.button25);
+        button4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                snackbar.show();
+            }
+        });
+        button5 = view.findViewById(R.id.button26);
+        button5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                snackbar.show();
+            }
+        });
+        imageButton = view.findViewById(R.id.imageView12);
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                navController.navigate(R.id.action_buscarDireccion_to_gasolineras );
+            }
+        });
+        imageButton2 = view.findViewById(R.id.imageView11);
+        imageButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                snackbar.show();
+            }
+        });
+        imageButton3 = view.findViewById(R.id.imageView10);
+        imageButton3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                snackbar.show();
+            }
+        });
+        imageButton4 = view.findViewById(R.id.imageView9);
+        imageButton4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                snackbar.show();
+            }
+        });
     }
 }

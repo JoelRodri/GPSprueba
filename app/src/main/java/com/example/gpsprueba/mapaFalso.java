@@ -80,7 +80,7 @@ public class mapaFalso extends Fragment {
 
         navController = Navigation.findNavController(view);
 
-        button = view.findViewById(R.id.imageView6);
+        button = view.findViewById(R.id.imageView8);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

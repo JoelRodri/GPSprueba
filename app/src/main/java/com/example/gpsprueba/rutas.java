@@ -2,11 +2,22 @@ package com.example.gpsprueba;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.material.snackbar.BaseTransientBottomBar;
+import com.google.android.material.snackbar.Snackbar;
+import com.royrodriguez.transitionbutton.TransitionButton;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -60,5 +71,24 @@ public class rutas extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_rutas, container, false);
+    }
+
+    NavController navController;
+    ImageView imageButton;
+    Snackbar snackbar;
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState){
+        super.onViewCreated(view, savedInstanceState);
+        navController = Navigation.findNavController(view);
+        snackbar = Snackbar.make(view,"Funcion en desarrollo", BaseTransientBottomBar.LENGTH_SHORT);
+
+        imageButton = view.findViewById(R.id.imageView21);
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                navController.navigate(R.id.action_rutas_to_buscarDireccion);
+            }
+        });
     }
 }

@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -85,6 +86,7 @@ public class marcador extends Fragment {
 
     NavController navController;
     Button button, button2, button3;
+    ImageView imageButton, imageButton2, imageButton3;
     Snackbar snackbar;
 
     @Override
@@ -121,6 +123,27 @@ public class marcador extends Fragment {
             @Override
             public void onClick(View view) {
                 //navController.navigate(R.id.action_marcador_to_nav_home);
+                snackbar.show();
+            }
+        });
+        imageButton = view.findViewById(R.id.imageView2);
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                snackbar.show();
+            }
+        });
+        imageButton2 = view.findViewById(R.id.imageView3);
+        imageButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                snackbar.show();
+            }
+        });
+        imageButton3 = view.findViewById(R.id.imageView4);
+        imageButton3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
                 snackbar.show();
             }
         });

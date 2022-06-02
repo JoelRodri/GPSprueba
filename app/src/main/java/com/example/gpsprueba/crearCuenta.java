@@ -29,7 +29,7 @@ public class crearCuenta extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_pantalla_inicio, container, false);
+        return inflater.inflate(R.layout.fragment_crear_cuenta, container, false);
     }
 
     NavController navController;
@@ -64,7 +64,7 @@ public class crearCuenta extends Fragment {
                             transitionButton.stopAnimation(TransitionButton.StopAnimationStyle.EXPAND, new TransitionButton.OnAnimationStopEndListener() {
                                 @Override
                                 public void onAnimationStopEnd() {
-                                    navController.navigate(R.id.action_pantalla_inicio_to_nav_home);
+                                    navController.navigate(R.id.action_crearCuenta_to_nav_home);
                                 }
                             });
                         } else {

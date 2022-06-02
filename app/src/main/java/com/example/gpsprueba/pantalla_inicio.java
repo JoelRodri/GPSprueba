@@ -33,7 +33,7 @@ public class pantalla_inicio extends Fragment {
     }
 
 
-    TransitionButton transitionButton, transitionButton2;
+    TransitionButton transitionButton;
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState){
@@ -78,7 +78,7 @@ public class pantalla_inicio extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                navController.navigate(R.id.crearCuenta);
+                navController.navigate(R.id.action_pantalla_inicio_to_crearCuenta);
             }
         });
     }
