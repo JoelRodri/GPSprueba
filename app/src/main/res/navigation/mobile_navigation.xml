@@ -13,16 +13,7 @@
         <action
             android:id="@+id/action_nav_home_to_buscarDireccion"
             app:destination="@id/buscarDireccion" />
-        <action
-            android:id="@+id/action_nav_home_to_menuDireccion"
-            app:destination="@id/menuDireccion" />
     </fragment>
-
-    <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.gpsprueba.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
 
     <fragment
         android:id="@+id/pantalla_inicio"
@@ -32,6 +23,9 @@
         <action
             android:id="@+id/action_pantalla_inicio_to_nav_home"
             app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_pantalla_inicio_to_crearCuenta"
+            app:destination="@id/crearCuenta" />
     </fragment>
     <fragment
         android:id="@+id/buscarDireccion"
@@ -42,23 +36,8 @@
             android:id="@+id/action_buscarDireccion_to_marcador"
             app:destination="@id/marcador" />
         <action
-            android:id="@+id/action_buscarDireccion_to_rutasGuardadas"
-            app:destination="@id/rutasGuardadas" />
-        <action
-            android:id="@+id/action_buscarDireccion_to_direcciones"
-            app:destination="@id/direcciones" />
-    </fragment>
-    <fragment
-        android:id="@+id/direcciones"
-        android:name="com.example.gpsprueba.direcciones"
-        android:label="Direcciones guardadas"
-        tools:layout="@layout/fragment_direcciones" >
-        <action
-            android:id="@+id/action_direcciones_to_marcador"
-            app:destination="@id/marcador" />
-        <action
-            android:id="@+id/action_direcciones_to_buscarDireccion"
-            app:destination="@id/buscarDireccion" />
+            android:id="@+id/action_buscarDireccion_to_gasolineras"
+            app:destination="@id/gasolineras" />
     </fragment>
     <fragment
         android:id="@+id/marcador"
@@ -69,93 +48,48 @@
             android:id="@+id/action_marcador_to_nav_home"
             app:destination="@id/nav_home" />
         <action
-            android:id="@+id/action_marcador_to_direcciones"
-            app:destination="@id/direcciones" />
-        <action
             android:id="@+id/action_marcador_to_mapaFalso"
             app:destination="@id/mapaFalso" />
     </fragment>
-    <fragment
-        android:id="@+id/puntosInteres"
-        android:name="com.example.gpsprueba.puntosInteres"
-        android:label="Puntos de interes"
-        tools:layout="@layout/fragment_puntos_interes" >
-        <action
-            android:id="@+id/action_puntosInteres_to_radares"
-            app:destination="@id/radares" />
-        <action
-            android:id="@+id/action_puntosInteres_to_gasolineras"
-            app:destination="@id/gasolineras" />
-        <action
-            android:id="@+id/action_puntosInteres_to_comisarias"
-            app:destination="@id/comisarias" />
-    </fragment>
-    <fragment
-        android:id="@+id/rutasGuardadas"
-        android:name="com.example.gpsprueba.rutasGuardadas"
-        android:label="Tus rutas"
-        tools:layout="@layout/fragment_rutas_guardadas" >
-        <action
-            android:id="@+id/action_rutasGuardadas_to_infoRuta"
-            app:destination="@id/infoRuta" />
-        <action
-            android:id="@+id/action_rutasGuardadas_to_buscarDireccion"
-            app:destination="@id/buscarDireccion" />
-    </fragment>
-    <fragment
-        android:id="@+id/cerrarSesion"
-        android:name="com.example.gpsprueba.cerrarSesion"
-        android:label="Cerrar sesión"
-        tools:layout="@layout/fragment_cerrar_sesion" >
-        <action
-            android:id="@+id/action_cerrarSesion_to_pantalla_inicio"
-            app:destination="@id/pantalla_inicio" />
-    </fragment>
-    <fragment
-        android:id="@+id/menuDireccion"
-        android:name="com.example.gpsprueba.menuDireccion"
-        tools:layout="@layout/fragment_menu_direccion" >
-        <action
-            android:id="@+id/action_menuDireccion_to_direcciones"
-            app:destination="@id/direcciones" />
-        <action
-            android:id="@+id/action_menuDireccion_to_rutasGuardadas"
-            app:destination="@id/rutasGuardadas" />
-        <action
-            android:id="@+id/action_menuDireccion_to_puntosInteres"
-            app:destination="@id/puntosInteres" />
-    </fragment>
-    <fragment
-        android:id="@+id/infoRuta"
-        android:name="com.example.gpsprueba.infoRuta"
-        android:label="Información de la ruta"
-        tools:layout="@layout/fragment_info_ruta" >
-        <action
-            android:id="@+id/action_infoRuta_to_marcador"
-            app:destination="@id/marcador" />
-    </fragment>
-    <fragment
-        android:id="@+id/radares"
-        android:name="com.example.gpsprueba.radares"
-        android:label="Radares"
-        tools:layout="@layout/fragment_radares" />
     <fragment
         android:id="@+id/gasolineras"
         android:name="com.example.gpsprueba.gasolineras"
         android:label="Gasolineras"
         tools:layout="@layout/fragment_gasolineras" />
     <fragment
-        android:id="@+id/comisarias"
-        android:name="com.example.gpsprueba.comisarias"
-        android:label="Comisarias"
-        tools:layout="@layout/fragment_comisarias" />
-    <fragment
         android:id="@+id/mapaFalso"
         android:name="com.example.gpsprueba.mapaFalso"
         android:label="Fast To GO"
         tools:layout="@layout/fragment_mapa_falso" >
         <action
-            android:id="@+id/action_mapaFalso_to_nav_home"
+            android:id="@+id/action_mapaFalso_to_marcador"
+            app:destination="@id/marcador" />
+    </fragment>
+    <fragment
+        android:id="@+id/crearCuenta"
+        android:name="com.example.gpsprueba.crearCuenta"
+        android:label="fragment_crear_cuenta"
+        tools:layout="@layout/fragment_crear_cuenta" >
+        <action
+            android:id="@+id/action_crearCuenta_to_nav_home"
             app:destination="@id/nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/perfil"
+        android:name="com.example.gpsprueba.perfil"
+        android:label="fragment_perfil"
+        tools:layout="@layout/fragment_perfil" >
+        <action
+            android:id="@+id/action_perfil_to_pantalla_inicio"
+            app:destination="@id/pantalla_inicio" />
+    </fragment>
+    <fragment
+        android:id="@+id/rutas"
+        android:name="com.example.gpsprueba.rutas"
+        android:label="fragment_rutas"
+        tools:layout="@layout/fragment_rutas" >
+        <action
+            android:id="@+id/action_rutas_to_buscarDireccion"
+            app:destination="@id/buscarDireccion" />
     </fragment>
 </navigation>

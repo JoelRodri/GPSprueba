@@ -84,7 +84,7 @@ public class marcador extends Fragment {
     }
 
     NavController navController;
-    Button button, button2;
+    Button button, button2, button3;
     Snackbar snackbar;
 
     @Override
@@ -99,22 +99,31 @@ public class marcador extends Fragment {
         navController = Navigation.findNavController(view);
 
 
-        snackbar = Snackbar.make(view,"Guardado con exito", BaseTransientBottomBar.LENGTH_SHORT);
+        snackbar = Snackbar.make(view,"Funcion en desarrollo", BaseTransientBottomBar.LENGTH_SHORT);
         button = view.findViewById(R.id.button11);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                navController.navigate(R.id.action_marcador_to_direcciones);
-                snackbar.show();
+                navController.navigate(R.id.action_marcador_to_nav_home);
+
             }
         });
-        /*button2 = view.findViewById(R.id.button10);
+        button2 = view.findViewById(R.id.button10);
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                navController.navigate(R.id.action_puntosInteres_to_gasolineras);
+                navController.navigate(R.id.action_marcador_to_mapaFalso);
+
             }
-        });*/
+        });
+        button3 = view.findViewById(R.id.button);
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //navController.navigate(R.id.action_marcador_to_nav_home);
+                snackbar.show();
+            }
+        });
     }
 
 }

@@ -21,10 +21,10 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.royrodriguez.transitionbutton.TransitionButton;
+import com.royrodriguez.transitionbutton.TransitionButton;
 
-public class pantalla_inicio extends Fragment {
-    NavController navController;
-    Button button;
+public class crearCuenta extends Fragment {
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -32,7 +32,7 @@ public class pantalla_inicio extends Fragment {
         return inflater.inflate(R.layout.fragment_pantalla_inicio, container, false);
     }
 
-
+    NavController navController;
     TransitionButton transitionButton, transitionButton2;
 
     @Override
@@ -45,7 +45,7 @@ public class pantalla_inicio extends Fragment {
 
         navController = Navigation.findNavController(view);
 
-        transitionButton = view.findViewById(R.id.button2);
+        transitionButton = view.findViewById(R.id.button20);
         transitionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -72,13 +72,6 @@ public class pantalla_inicio extends Fragment {
                         }
                     }
                 }, 2000);
-            }
-        });
-        button = view.findViewById(R.id.button22);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                navController.navigate(R.id.crearCuenta);
             }
         });
     }

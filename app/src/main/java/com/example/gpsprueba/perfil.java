@@ -2,26 +2,18 @@ package com.example.gpsprueba;
 
 import android.os.Bundle;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-
-import com.google.android.material.snackbar.BaseTransientBottomBar;
-import com.google.android.material.snackbar.Snackbar;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link cerrarSesion#newInstance} factory method to
+ * Use the {@link perfil#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class cerrarSesion extends Fragment {
+public class perfil extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -32,7 +24,7 @@ public class cerrarSesion extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public cerrarSesion() {
+    public perfil() {
         // Required empty public constructor
     }
 
@@ -42,11 +34,11 @@ public class cerrarSesion extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment cerrarSesion.
+     * @return A new instance of fragment perfil.
      */
     // TODO: Rename and change types and number of parameters
-    public static cerrarSesion newInstance(String param1, String param2) {
-        cerrarSesion fragment = new cerrarSesion();
+    public static perfil newInstance(String param1, String param2) {
+        perfil fragment = new perfil();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -67,27 +59,6 @@ public class cerrarSesion extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_cerrar_sesion, container, false);
-    }
-
-    NavController navController;
-    Button button;
-    Snackbar snackbar;
-
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState){
-        super.onViewCreated(view, savedInstanceState);
-
-        navController = Navigation.findNavController(view);
-
-        snackbar = Snackbar.make(view,"Sesión cerrada", BaseTransientBottomBar.LENGTH_SHORT);
-        button = view.findViewById(R.id.button12);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                navController.navigate(R.id.action_cerrarSesion_to_pantalla_inicio);
-                snackbar.show();
-            }
-        });
+        return inflater.inflate(R.layout.fragment_perfil, container, false);
     }
 }

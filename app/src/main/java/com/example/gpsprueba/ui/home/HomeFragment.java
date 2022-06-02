@@ -71,13 +71,5 @@ public class HomeFragment extends Fragment {
                 navController.navigate(R.id.action_nav_home_to_buscarDireccion);
             }
         });
-
-        textView2 = view.findViewById(R.id.button);
-        textView2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                navController.navigate(R.id.action_nav_home_to_menuDireccion);
-            }
-        });
     }
 }

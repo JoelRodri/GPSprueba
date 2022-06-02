@@ -2,23 +2,18 @@ package com.example.gpsprueba;
 
 import android.os.Bundle;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link rutasGuardadas#newInstance} factory method to
+ * Use the {@link rutas#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class rutasGuardadas extends Fragment {
+public class rutas extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -29,7 +24,7 @@ public class rutasGuardadas extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public rutasGuardadas() {
+    public rutas() {
         // Required empty public constructor
     }
 
@@ -39,11 +34,11 @@ public class rutasGuardadas extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment rutasGuardadas.
+     * @return A new instance of fragment rutas.
      */
     // TODO: Rename and change types and number of parameters
-    public static rutasGuardadas newInstance(String param1, String param2) {
-        rutasGuardadas fragment = new rutasGuardadas();
+    public static rutas newInstance(String param1, String param2) {
+        rutas fragment = new rutas();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -64,31 +59,6 @@ public class rutasGuardadas extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_rutas_guardadas, container, false);
-    }
-
-    NavController navController;
-    Button button, button2;
-
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState){
-        super.onViewCreated(view, savedInstanceState);
-
-        navController = Navigation.findNavController(view);
-
-        button = view.findViewById(R.id.button16);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                navController.navigate(R.id.action_rutasGuardadas_to_buscarDireccion);
-            }
-        });
-        button2 = view.findViewById(R.id.button17);
-        button2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                navController.navigate(R.id.action_rutasGuardadas_to_infoRuta);
-            }
-        });
+        return inflater.inflate(R.layout.fragment_rutas, container, false);
     }
 }

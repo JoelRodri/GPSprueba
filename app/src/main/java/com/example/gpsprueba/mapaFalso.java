@@ -80,11 +80,11 @@ public class mapaFalso extends Fragment {
 
         navController = Navigation.findNavController(view);
 
-        button = view.findViewById(R.id.button12);
+        button = view.findViewById(R.id.imageView6);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                navController.navigate(R.id.action_mapaFalso_to_nav_home);
+                navController.navigate(R.id.action_mapaFalso_to_marcador);
             }
         });
     }
